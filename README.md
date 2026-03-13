@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Assisted Ownership Transfer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An Omada Identity Cloud prototype built with React and @omada/prototype-components.
+
+## Overview
+
+This prototype demonstrates [describe key functionality here].
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+```
+
+The application will open at [http://localhost:3000](http://localhost:3000).
+
+## Features
+
+- **Table View**: View all items in a sortable, filterable table
+- **Filtering**: Filter by status, category, search text
+- **Grouping**: Group items by identity, system, category, or AI recommendation
+- **AI Recommendations**: AI-powered approve/reject suggestions with confidence levels
+- **Bulk Actions**: Process multiple items at once
+- **Column Visibility**: Show/hide columns as needed
+
+## Project Structure
+
+```
+src/
+├── components/           # React components
+│   └── MainTable.jsx     # Main table component (create this)
+├── data/
+│   └── items.json        # Mock data
+├── App.js                # Main application
+└── index.js              # Entry point
+```
+
+## Using @omada/prototype-components
+
+This project uses the `@omada/prototype-components` package for shared components:
+
+```jsx
+import {
+  FilterBar,
+  GroupHeader,
+  CompactRecommendationCard,
+  useFilters,
+  omadaTheme,
+  groupByField,
+  searchItems
+} from '@omada/prototype-components';
+```
+
+See the [component library documentation](https://github.com/OmadaIdentity/omada-prototype-toolkit/tree/main/packages/components) for more details.
+
+## Data Files
+
+### items.json
+
+Contains the main data items. Each item should have:
+
+- `id`: Unique identifier
+- `name`: Display name
+- `status`: Current status (pending, approved, rejected)
+- `category`: Item category
+- Add your specific fields as needed
+
+## Next Steps
+
+1. **Create MainTable Component**: Build your main table component in `src/components/MainTable.jsx`
+2. **Add Data**: Update `src/data/items.json` with your mock data
+3. **Customize**: Add domain-specific fields and logic
+4. **Document**: Update this README with your specific features
+
+## Technologies
+
+- React 19
+- Material-UI 7
+- @omada/prototype-components
+- Create React App
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start` - Run development server
+- `npm test` - Run tests
+- `npm run build` - Build for production
 
-### `npm start`
+## Updating Components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To update to the latest version of @omada/prototype-components:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm update @omada/prototype-components
+```
