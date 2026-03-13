@@ -144,7 +144,7 @@ const renderTableHeaders = (visibleColumns) => (
 );
 
 export default function OwnershipTable() {
-  const { filters, isColumnVisible, getSelectedIds, toggleSelection, selectAll, clearSelection } = useFilters();
+  const { filters, getSelectedIds, toggleSelection, selectAll, clearSelection } = useFilters();
   const [data, setData] = useState([]);
   const [collapsedGroups, setCollapsedGroups] = useState(new Set());
 
