@@ -6,7 +6,10 @@
       "Bash(gh api:*)",
       "Bash(gh auth:*)",
       "Bash(gh repo:*)",
-      "Bash(az group:*)"
+      "Bash(az group:*)",
+      "Bash(az account:*)",
+      "Bash(az staticwebapp:*)",
+      "Bash(gh secret:*)"
     ]
   }
 }
